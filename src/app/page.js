@@ -27,16 +27,24 @@ export default function Component() {
       <div className="relative z-10">
         {/* Header */}
         <header className="fixed top-0 left-0 right-0 bg-black bg-opacity-50 p-4">
-          <nav className="container mx-auto flex justify-between items-center">
-            <img src='/logo.jpg' alt="Rave Race Logo" className="h-10" />
-            <div className="space-x-4">
-              <Button variant="ghost">Home</Button>
-              <Button variant="ghost">Features</Button>
-              <Button variant="ghost">How to Play</Button>
-              <Button variant="ghost">Marketplace</Button>
-            </div>
-          </nav>
-        </header>
+  <nav className="container mx-auto flex justify-between items-center">
+    <img src='/logo.jpg' alt="Rave Race Logo" className="h-10" />
+    <div className="space-x-4">
+      <Link href="/" passHref>
+        <Button variant="ghost">Home</Button>
+      </Link>
+      <Link href="/features" passHref>
+        <Button variant="ghost">Features</Button>
+      </Link>
+      <Link href="/how-to-play" passHref>
+        <Button variant="ghost">How to Play</Button>
+      </Link>
+      <Link href="/marketplace" passHref>
+        <Button variant="ghost">Marketplace</Button>
+      </Link>
+    </div>
+  </nav>
+</header>
 
         {/* Hero Section */}
         <section style={fadeIn} className="min-h-screen flex items-center justify-center text-center">
